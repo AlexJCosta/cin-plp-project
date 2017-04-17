@@ -51,9 +51,13 @@ DecFuncao ::= "fun" ListId "=" Expressao
 
 DecComposta ::= DeclaracaoFuncional "," DeclaracaoFuncional
 
+Processo ::= ExpDeclaracao
+
 ListId ::= Id  |  Id, ListId
 
 Aplicacao:= Expressao"(" ListExp ")"
+
+AplicacaoProcesso ::= "(" Processo ")" | "(" Processo, AplicacaoProcesso ")"
 
 ListExp ::= Expressao  |  Expressao, ListExp
 ```
